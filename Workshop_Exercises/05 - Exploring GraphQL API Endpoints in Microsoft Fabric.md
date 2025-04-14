@@ -15,7 +15,7 @@ We can start building GraphQL APIs directly from within the Fabric SQL query edi
 
 Let's first create a view using a simple analytical T-SQL query. The new view, ``SupplyChain.vProductsbySuppliers``, will be used for the GraphQL API.
 
-1. Click on **Workspaces** and select the **<inject key="WorkspaceName" enableCopy="false"/>** workspace.
+1. Click on **Workspaces** and select the **Fabcon-workspace** workspace.
 
    ![](../media/new2.png)
 
@@ -276,10 +276,10 @@ Now, let's explore how a GraphQL endpoint can be utilized in a live web applicat
 
 1. Navigate to the web application (https://fabricgraphql.azurewebsites.net/). 
 
-2. In the **Enter your Microsoft Fabric Username (Email)** field, enter ``fabricgraphql@cloudlabsai.ms``.
+2. In the **Enter your Microsoft Fabric Username (Email)** field, enter ``fabricgraphql@xxxxxx``.
 
    ```
-   fabricgraphql@cloudlabsai.ms
+   fabricgraphql@xxxxxx
    ```
 
 3. In the **Enter your Password** field, enter ``Tafa800099`` and press **Enter**.

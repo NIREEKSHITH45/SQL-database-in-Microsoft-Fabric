@@ -10,7 +10,7 @@ The Performance Dashboard in Microsoft Fabric SQL database displays the performa
 
 You can use the Performance Dashboard to view database performance metrics, to identify performance bottlenecks, and find solutions to performance issues.
 
-1. Click on **Workspaces** and select **<inject key="WorkspaceName" enableCopy="false"/>** workspace.
+1. Click on **Workspaces** and select **Fabcon-workspace** workspace.
 
    ![](../media/new2.png)
 

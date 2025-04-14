@@ -10,7 +10,7 @@ Contoso developers have been tasked with creating an online shopping copilot for
 
 Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has the dedicated vector data type. This allows for efficient and optimized storing of vector data, and comes with a set of functions to help developers streamline vector and similarity search implementation. The Azure OpenAI ada-002 model can be easily consumed within Microsoft Fabric SQL Database using the sp_invoke_external_rest_endpoint system stored procedure, to tranform data into embeddings.
 
-1. Click on **Workspaces** and select the **<inject key="WorkspaceName" enableCopy="false"/>** workspace.
+1. Click on **Workspaces** and select the **Fabcon-workspace** workspace.
 
    ![](../media/new2.png)
 
@@ -29,14 +29,14 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Smoothie@123';
 
     -- Create a database scoped credential for accessing a specific HTTPS endpoint
-    CREATE DATABASE SCOPED CREDENTIAL [<inject key="Openaiendpoint" enableCopy="false"/>] 
+    CREATE DATABASE SCOPED CREDENTIAL [Openaiendpoint] 
     WITH IDENTITY = 'HTTPEndpointHeaders',
     SECRET = '{"api-key": "<inject key="OpenAIKey" enableCopy="false"/>"}';
 
     -- Retrieve information about the database scoped credential with the specified name
     SELECT * 
     FROM sys.database_scoped_credentials
-    WHERE name = '<inject key="Openaiendpoint" enableCopy="false"/>';
+    WHERE name = '<"Openaiendpoint"/>';
 ```
     
    ![](../media/Exe6_01_image.png)
@@ -58,11 +58,11 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
         -- Define headers for the REST API call
         DECLARE @headers NVARCHAR(MAX) = JSON_OBJECT(
         'Content-Type': 'application/json',
-        'api-key': '<inject key="OpenAIKey" enableCopy="false"/>' 
+        'api-key': '"OpenAIKey"/>' 
     );
         -- Call the external REST API to get text embeddings
         exec @retval = sp_invoke_external_rest_endpoint
-            @url = '<inject key="Openaiendpoint" enableCopy="false"/>openai/deployments/text-embedding-ada-002/embeddings?api-version=2023-05-15',
+            @url = "Openaiendpoint" >openai/deployments/text-embedding-ada-002/embeddings?api-version=2023-05-15',
             @method = 'POST',
             @credential = [<inject key="Openaiendpoint" enableCopy="false"/>],
             @payload = @payload,
@@ -204,7 +204,7 @@ Let us implement RAG-pattern with Microsoft Fabric SQL Database, which now has t
 
         -- Call the external REST endpoint to interact with the Language Model
         EXEC @LLMRetval = sp_invoke_external_rest_endpoint
-            @url = '<inject key="Openaiendpoint" enableCopy="false"/>openai/deployments/gpt-4/chat/completions?api-version=2024-08-01-preview',
+            @url = <"Openaiendpoint" >openai/deployments/gpt-4/chat/completions?api-version=2024-08-01-preview',
             @method = 'POST',
             @credential = [<inject key="Openaiendpoint" enableCopy="false"/>],
             @payload = @LLMPayload,
@@ -307,9 +307,9 @@ Let's use the natural language understanding and reasoning capabilities of the L
         DECLARE @retval INT, @response NVARCHAR(MAX);
         
         EXEC @retval = sp_invoke_external_rest_endpoint
-            @url = '<inject key="Openaiendpoint" enableCopy="false"/>openai/deployments/gpt-4/chat/completions?api-version=2024-08-01-preview',
+            @url = '<"Openaiendpoint" >openai/deployments/gpt-4/chat/completions?api-version=2024-08-01-preview',
             @method = 'POST',
-            @credential = [<inject key="Openaiendpoint" enableCopy="false"/>],
+            @credential = ["Openaiendpoint" enableCopy="false"/>],
             @payload = @Payload,
             @response = @AIResponse OUTPUT;
 
