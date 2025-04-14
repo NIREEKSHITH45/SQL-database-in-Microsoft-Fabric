@@ -24,7 +24,7 @@ In this task, we will use **Dataflow Gen2** to ingest data and efficiently copy 
 
     >**Note:** Close any pop-up that appears on the screen.
 
-    ![alt text](../media/image5u.png)
+    ![](../media/image5u.png)
 
     ![alt text](../media/newu.png)
 
