@@ -12,7 +12,7 @@ Before starting this exercise, open a backup Click-by-Click using the following 
 
 #### Activity: Write SQL queries in the SQL query editor in Microsoft Fabric
 
-1. Click on **Workspaces** from the left navigation pane and select the **<inject key="WorkspaceName" enableCopy="false"/>** workspace.
+1. Click on **Workspaces** from the left navigation pane and select the **Fabcon-workspace** workspace.
 
    ![](../media/new2.png)
 

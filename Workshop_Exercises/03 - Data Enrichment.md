@@ -110,7 +110,7 @@ Now, this is something exciting! This section shows how easy it is to create Sho
 
 #### Activity: Create a new dataflow gen2 in Fabric to process raw data from Lakehouse
 
-1. Click on **Workspaces** and select the **<inject key="WorkspaceName" enableCopy="false"/>** workspace.
+1. Click on **Workspaces** and select the **Fabcon-workspace** workspace.
 
     ![](../media/new2.png)
 
@@ -136,8 +136,6 @@ Now, this is something exciting! This section shows how easy it is to create Sho
 
    ![](../media/f9.png)
 
-   >**Note :** If you don't see fabcon_database, click the ellipsis in the top right corner and adjust JumpVM's screen resolution to 90%.
-
    ![](../media/new3u.png)
 
 6. Expand **Lakehouse**, **Files** and then **data**. 
@@ -159,12 +157,6 @@ Now, this is something exciting! This section shows how easy it is to create Sho
     ```
 
     ![alt text](../media/g16.png)
-
-    >**Note :** If the Copilot option is not visible, click on the arrow to reveal it.
-
-    ![alt text](../media/copilotarrow.png)
-
-
 
 **Note:** If Copilot needs additional context to understand your query, consider rephrasing the prompt to include more details.
 
@@ -219,7 +211,7 @@ Now, this is something exciting! This section shows how easy it is to create Sho
 
 #### Activity: Use pipeline activities to load transformed data into SQL Database
 
-1. Click on **Workspaces** and select the **<inject key="WorkspaceName" enableCopy="false"/>** workspace.
+1. Click on **Workspaces** and select the **Fabcon-workspace** workspace.
 
     ![](../media/new2.png)
 
@@ -265,7 +257,7 @@ Now, this is something exciting! This section shows how easy it is to create Sho
 
 #### Activity: Get JDBC URL
  
-1. Click on the **<inject key="WorkspaceName" enableCopy="false"/>** workspace from the left menu.
+1. Click on the **Fabcon-workspace** workspace from the left menu.
 
     ![](../media/new5u.png)
  
@@ -298,7 +290,7 @@ Now, this is something exciting! This section shows how easy it is to create Sho
 
 #### Activity: Create a Notebook in the Fabric workspace and process data
 
-1. Click on the **<inject key="WorkspaceName" enableCopy="false"/>** workspace from the left menu.
+1. Click on the **Fabcon-workspace** workspace from the left menu.
 
    ![](../media/new5u.png)
 
@@ -339,8 +331,8 @@ Now, this is something exciting! This section shows how easy it is to create Sho
 
     jdbc_url = "<jdbc_url>"
     jdbc_properties = {
-        "user": f"173c7875-69b5-4d9b-9bf1-0898bb590773@79fe009c-79e0-4bc9-baec-a76d3145bde5",
-        "password": "<inject key="ClientSecret" enableCopy="false"/>",
+        "user": f"<Application (client) ID>@<Directory (tenant) ID>",
+        "password": ""<jdbc_pswd>" ",
         "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver"
     }
 
@@ -428,7 +420,7 @@ Now, this is something exciting! This section shows how easy it is to create Sho
 
     ![](../media/task_3.2.1.10.png)
 
-14. Click on the **<inject key="WorkspaceName" enableCopy="false"/>** workspace in the left menu.
+14. Click on the **Fabcon-workspace** workspace in the left menu.
 
     ![](../media/new5u.png)
 
