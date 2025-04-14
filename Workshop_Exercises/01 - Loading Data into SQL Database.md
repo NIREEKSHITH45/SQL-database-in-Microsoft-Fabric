@@ -32,7 +32,7 @@ In this task, we will use **Dataflow Gen2** to ingest data and efficiently copy 
 
    ![alt text](../media/Newworkspace.png)
 
-4. In the **Name** field, enter **<inject key="WorkspaceName" enableCopy="true"/>**, then click **Apply**.
+4. In the **Name** field, enter **Fabcon-workspace, then click **Apply**.
 
     > **Note:** Only use the workspace name provided above.
     
@@ -111,7 +111,7 @@ In this task, we will use **Dataflow Gen2** to ingest data and efficiently copy 
 
    ![](../media/dfgen2.4.png)
 
-5. On the **Connection settings** pane, in the **Server** field, paste the following value **<inject key="MssqlServer" enableCopy="true"/>**.
+5. On the **Connection settings** pane, in the **Server** field, paste the following value **MssqlServer**.
 6. In the **Database** field, paste ```SalesDb```.
 
    ```
@@ -146,7 +146,7 @@ In this task, we will use **Dataflow Gen2** to ingest data and efficiently copy 
 
    ![](../media/dfgen2.9.png)
 
-11. Expand the **<inject key="WorkspaceName" enableCopy="false"/>** folder, select the **Fabcon_database** and then click on the **Next** button.
+11. Expand the **Fabcon-workspace** folder, select the **Fabcon_database** and then click on the **Next** button.
 
     ![](../media/new4.png)
 
@@ -171,7 +171,7 @@ In this task, we will use **Dataflow Gen2** to ingest data and efficiently copy 
 
 #### Activity: Verify the data transfer by querying tables in the SQL Database
 
-1. Click on **Workspaces** and select the **<inject key="WorkspaceName" enableCopy="false"/>** workspace.
+1. Click on **Workspaces** and select the **Fabcon-workspace** workspace.
 
    ![](../media/new2.png)
 
@@ -205,7 +205,7 @@ For this workshop, the **On-Premises Data Gateway** is already provisioned for y
 
 #### Activity: Use a Fabric Pipeline to load data from the On-premises database to the SQL Database
 
-1. Click on **Workspaces** and select the **<inject key="WorkspaceName" enableCopy="false"/>** workspace.
+1. Click on **Workspaces** and select the **Fabcon-workspace** workspace.
 
    ![](../media/new2.png)
 
@@ -228,10 +228,10 @@ For this workshop, the **On-Premises Data Gateway** is already provisioned for y
 
     ![](../media/datapipeline3.png)
 
-6. In the **Connection settings** pane, in the **Server** field paste **LabVM-1653224** , and paste **FabconDatabase** in the **Database** field. It automatically selects the **Connection**. Click on the **Next** button.
+6. In the **Connection settings** pane, in the **Server** field paste **LabVM** , and paste **FabconDatabase** in the **Database** field. It automatically selects the **Connection**. Click on the **Next** button.
 
     ```
-    LabVM-1653224
+    LabVM
     ```
     ```
     FabconDatabase
@@ -248,8 +248,6 @@ For this workshop, the **On-Premises Data Gateway** is already provisioned for y
 8. Click on **OneLake** and select existing **SQL database**.
 
    ![](../media/f53.png)
-
-   > **Note :** If you don't see **Fabcon_database**, click the **ellipsis** in the top right corner and adjust **JumpVM's** screen resolution to 90%.
 
    ![](../media/new3u.png)
 
